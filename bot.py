@@ -1,7 +1,6 @@
 import discord
 import os
 from discord.ext import commands
-from discord.components import Button 
 from discord.ui import Button, View
 from dotenv import load_dotenv
 
@@ -27,7 +26,8 @@ for filename in os.listdir("./cogs"):
 async def on_ready():
     activity = discord.Game(name="Playing sb.help !", type=3)
     await bot.change_presence(status=discord.Status.dnd, activity=activity)
-    print("Bot is ready!")
+    print(f"Status Changed!")
+    print(f"Bot is ready!")
     print(f'Logged in as: {bot.user.name}')
     print(f'With ID: {bot.user.id}')
 
